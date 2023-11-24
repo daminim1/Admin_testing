@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottle Gallery</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #3498db, #2c3e50);
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #ff7038;
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        model-viewer {
+            width: 350px;
+            height: 525px;
+            margin: 0 0 0 10px;
+            background-color: unset;
+        }
+
+        #codeInputContainer {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style for the Admin Window */
+        #adminWindow {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        /* Style for the Admin Modal */
+        #adminModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+        }
+    </style>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <h1>Bottle Gallery</h1>
+	
+    <button onclick="window.location.href='Canton_Page'">Skip codes for testing</button>
+    <!-- Admin Button -->
+    <!-- <button id="adminButton" onclick="toggleAdminWindow()">Admin</button> -->
+
+    <!-- Code Input Container -->
+    <div id="codeInputContainer">
+        <input type="text" id="usernameInput" placeholder="Enter Username">
+        <input type="text" id="codeInput" placeholder="Enter Code">
+        <button onclick="checkCredentials()">Submit</button>
+        <p id="errorText" style="color: red; display: none;">Invalid Credentials</p>
+    </div>
+
+    <!-- Admin Window -->
+    <div id="adminWindow">
+        <!-- Add admin tools here -->
+        <p>This is the Admin Window</p>
+        <button onclick="openCreateModal()">Create New HTML</button>
+        <button onclick="modifyExistingHTML()">Modify Existing HTML</button>
+    </div>
+
+    <!-- Admin Modal -->
+    <div id="adminModal">
+        <h2>Create New HTML</h2>
+        <label for="glbInput">GLB File:</label>
+        <input type="file" id="glbInput" accept=".glb">
+        <button onclick="createNewHTML()">Create</button>
+        <button onclick="closeCreateModal()">Cancel</button>
+    </div>
+
+    <script>
+        // Simplified condition for demonstration purposes
+        const isAdmin = true; // Change this condition based on your requirements
+
+        // Set the initial visibility of the admin button
+        const adminButton = document.getElementById('adminButton');
+        adminButton.style.display = isAdmin ? 'block' : 'none';
+
+        function toggleAdminWindow() {
+            const adminWindow = document.getElementById('adminWindow');
+            adminWindow.style.display = adminWindow.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function openCreateModal() {
+            const adminModal = document.getElementById('adminModal');
+            adminModal.style.display = 'block';
+        }
+
+        function closeCreateModal() {
+            const adminModal = document.getElementById('adminModal');
+            adminModal.style.display = 'none';
+        }
+
+        function checkCredentials() {
+            const usernameInput = document.getElementById('usernameInput').value;
+            const codeInput = document.getElementById('codeInput').value;
+            const validCredentials = {
+                'Canton2320': '29*ab2ega=kG8C',
+                // Add more usernames and codes as needed
+            };
+
+            const isValid = validCredentials[usernameInput] === codeInput;
+            const errorText = document.getElementById('errorText');
+
+            if (isValid) {
+                // Redirect to the page
+                window.location.href = 'pages/Canton_Page.html';
+            } else {
+                errorText.style.display = 'block';
+            }
+        }
+
+        // Dummy functions for admin tools (replace with actual implementation)
+        function createNewHTML() {
+            const glbInput = document.getElementById('glbInput');
+            const glbFile = glbInput.files[0];
+            
+            // Do something with the GLB file (upload to server, etc.)
+            console.log('Creating new HTML with GLB file:', glbFile);
+            
+            // Close the modal
+            closeCreateModal();
+        }
+
+        function modifyExistingHTML() {
+            console.log('Modifying existing HTML...');
+        }
+    </script>
+</body>
+</html>

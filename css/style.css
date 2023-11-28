@@ -118,4 +118,11 @@ nav{ display: none; }
 		grid-areas: img;
 		min-width: 250px;
 	}
+	
+	.section__subtitle--intro{
+		align-self: start;
+		grid-column: -1 / 1;
+		grid-row: 2;
+		text-align: right;
+	}
 }

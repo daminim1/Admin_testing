@@ -149,6 +149,7 @@ nav{ display: none; }
 .my-services {
 	background-color: var(--clr-dark);
 	background-image: url(../assets/images/My_serv_backg.png);
+	background-size: cover;
 	color: var(--clr-light);
 	
 }

@@ -142,3 +142,13 @@ nav{ display: none; }
 		width: calc(100% + 1.5em);
 	}
 }
+
+
+/* My services section */
+
+.my-services {
+	background-color: var(--clr-dark);
+	background-image: url(../assets/images/My_services_background.png);
+	color: var(--clr-light);
+	
+}

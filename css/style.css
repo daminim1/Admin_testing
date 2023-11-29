@@ -255,7 +255,7 @@ nav{ display: none; }
 	
 	.about-me__img {
 		grid-area: img;
-		position: relative:
+		position: relative;
 		z-index: 2;
 	}
 }

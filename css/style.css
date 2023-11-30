@@ -282,24 +282,17 @@ nav{ display: none; }
 
 .portfolio__item {
 	background: var(--clr-accent);
-	overflow: hidden;
 }
 
 .portfolio__img {
-	transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear; 
-}
-
-.portfolio__item:focus {
-	position: relative;
-	z-index: 2;
-}
-
-.portfolio__item:hover {
-  background-color: red; /* or any color you want to test */
+	transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+	opacity 250ms linear; 
 }
 
 
-.portfolio__img:hover .portfolio__img {
+
+
+.portfolio__img:hover {
 	transform: scale(1.2);
 	opacity: .75;
 }

@@ -186,9 +186,27 @@ header {
 	z-index: 1000;
 }
 
-.nav-open {
-	background: red;
+.nav-open .nav {
+	transform: translateX(0);
 }
+
+.nav-open .nav-toggle {
+	position: fixed;
+}
+
+.nav-open .hamburger {
+	transform: rotate(.635turns);
+}
+
+nav-open .hamburger::before {
+	transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+	opacity: 0;
+}
+
+
 
 .hamburger {
 	display: block;

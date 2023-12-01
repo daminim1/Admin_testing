@@ -195,7 +195,7 @@ header {
 }
 
 .nav-open .hamburger {
-	transform: rotate(.635turns);
+	transform: rotate(.625turns);
 }
 
 nav-open .hamburger::before {

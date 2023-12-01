@@ -200,10 +200,10 @@ header {
 }
 
 .nav-open .hamburger {
-	transform: rotate(.625turns);
+	transform: rotate(.625turn);
 }
 
-nav-open .hamburger::before {
+.nav-open .hamburger::before {
 	transform: rotate(90deg) translateX(-6px);
 }
 

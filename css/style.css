@@ -467,3 +467,11 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
+.model_viewer {
+	width: 400px;
+    height: 600px;
+	margin: 0 10px;
+	background-color: unset;
+}

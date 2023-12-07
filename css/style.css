@@ -472,7 +472,10 @@ header {
 .model_viewer {
 	width: 400px;
     height: 600px;
-	margin: 0 10px;
+	margin: auto;
 	background-color: unset;
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }

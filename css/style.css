@@ -486,8 +486,6 @@ header {
 
 
 video.video_player {
-	width: 560px;
-	height: 315px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;

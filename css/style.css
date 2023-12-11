@@ -468,12 +468,26 @@ header {
 	margin-right: auto;
 }
 
+.portfolio_item_image {
+	box-shadow: var(--bs);
+}
+
 
 .model_viewer {
 	width: 400px;
     height: 600px;
 	margin: auto;
 	background-color: unset;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+.video_player {
+	width: 560px;
+	height: 315px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;

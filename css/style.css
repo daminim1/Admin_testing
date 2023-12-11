@@ -488,6 +488,8 @@ header {
 .video_player {
 	width: 560px;
 	height: 315px;
-	margin: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 }

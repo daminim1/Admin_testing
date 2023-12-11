@@ -488,8 +488,6 @@ header {
 .video_player {
 	width: 560px;
 	height: 315px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
+	margin: auto;
+	text-align: center;
 }

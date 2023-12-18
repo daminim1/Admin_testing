@@ -492,3 +492,10 @@ header {
 	margin: 0 auto;
 	max-width: 600px;
 }
+
+
+.portfolio_item_title {
+	color: var(--clr-dark);
+	text-align: center;
+	margin: 0 auto;
+}
